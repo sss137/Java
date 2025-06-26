@@ -34,6 +34,18 @@ public class ReferenceEx {
     System.out.println(a);  //자바에서는 참조값에 접근할 수 없으므로 참조값이 출력되지 않습니다. 그냥 참조값을 통해 얻을 수 있는 "Hello World"를 출력합니다.
     System.out.println(System.identityHashCode(a)); //참조값은 아니지만 유사한 값을 대신 확인합니다.
     
+    /*
+     * [Stack 영역]
+     * +-----------+
+     * | a : 0x101 |
+     * +-----------+
+     * 
+     * [Heap 영역]
+     * +-----------+
+     * |   Hello   | 0x101
+     * |   World   |
+     * +-----------+
+     */
   }
 
 }
