@@ -62,7 +62,7 @@ public class PrimitiveEx {
       double b;
       
       //float 주의사항(리터럴 작성 시 반드시 마지막에 f 또는 F를 추가합니다.)
-      a = 1.5f; System.out.println(a); //floate은 사용하지 않습니다.
+      a = 1.5f; System.out.println(a); //float는 사용하지 않습니다.
       b = 2.5; System.out.println(b);
     }
     
