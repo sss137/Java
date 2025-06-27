@@ -36,6 +36,22 @@ public class OneDimensionEx {
 //    함수 AAA(String[] args) {...}
 //    호출 AAA({...})                 << 불가능
 //         AAA(new String[] {...})    << 가능
+    
+    //배열 순회하기(일반 for문, 향상된 for문)
+    String[] hobbies = new String[] {"travel", "game", "coding"};
+    
+    //일반 for문
+    for(int i = 0; i < hobbies.length; i++) {
+      System.out.print(hobbies[i] + ",");
+    }
+    System.out.println(); //줄바꿈
+    
+    //향상된 for문(Enhanced for)
+    for(String hobby : hobbies) {
+      System.out.print(hobby + ",");
+    }
+    System.out.println();
+    
   }
 
 }
