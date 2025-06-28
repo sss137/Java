@@ -7,7 +7,7 @@ public class MultiDimensionEx {
     //1차원 배열이 여러 개 존재하는 경우 이 1차원 배열을 합치는 것을 의미합니다.
     
     //2차원 배열 선언
-    String[][] seats;
+    String[][] seats;  
     
     //2차원 배열 생성
     seats = new String[3][];    //1차원 배열이 3개입니다.
