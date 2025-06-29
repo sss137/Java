@@ -9,7 +9,7 @@ public class OneDimensionEx {
     String[] blackPink;   //스택 영역에 참조 변수 blackPink가 생성됩니다.
     
     //배열 생성
-    blackPink = new String[4];    //힙 영역에 String 저장이 가능한 연속된 4개 메모리 공간이 생성됩니다.
+    blackPink = new String[4];    //힙 영역에 String 타입이 저장 가능한 연속된 4개 메모리 공간이 생성됩니다.
                                   //그 중 첫 번째 공간의 참조값을 참조변수 blackPink에 저장합니다.
                                   //힙 영역에 생성된 4개 메모리 공간은 늘이거나 줄일 수 없습니다.
     

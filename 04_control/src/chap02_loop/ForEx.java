@@ -6,7 +6,6 @@ public class ForEx {
     //1~100 누적하기
     int total = 0;
     for(int x = 1; x <= 100; x++) {
-      
       total += x;
     }
     System.out.println(total);
@@ -16,7 +15,7 @@ public class ForEx {
     int oddCount = 0;
     double oddAverage;
     for(int x = 1; x <= 100; x++) {
-      if(!(x % 2 ==0)) {
+      if(!(x % 2 == 0)) {
         oddTotal += x;
         oddCount++;
       }

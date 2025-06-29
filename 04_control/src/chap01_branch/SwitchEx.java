@@ -5,7 +5,7 @@ public class SwitchEx {
   public static void main(String[] args) {
     //짝수/홀수
     int x = 10;
-    switch(x % 2) {        //가능한 표현식 타입: byte, short, int, char, String
+    switch(x % 2) {             //가능한 표현식 타입: byte, short, int, char, String
                                 //불가능(long, float, double, boolean)
     case 0: System.out.println("짝수"); break;
     case 1: System.out.println("홀수");

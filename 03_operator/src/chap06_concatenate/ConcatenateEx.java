@@ -5,8 +5,8 @@ public class ConcatenateEx {
   public static void main(String[] args) {
     //문자열 연결 : +
     int x = 10;
-    System.out.println(x + "살");
-    System.out.println(x + 1 + "살");
+    System.out.println(x + "살");    //"10살"
+    System.out.println(x + 1 + "살");    //"11살"
     
     //숫자 타입(정수, 실수)의 데이터를 문자열 타입으로 변경할 때 유용합니다.
     int y = 10;
