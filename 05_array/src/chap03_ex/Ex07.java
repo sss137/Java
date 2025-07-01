@@ -29,6 +29,17 @@ public class Ex07 {
                         //  └---+---+---+---+---+---+---+---+---+---┘
                         //    0   1   2   3   4   5   6   7   8   9
     
+    int i = 0;
+    while(number > 0) {
+      binary[i] = number % 2;
+      number /= 2;
+      i++;
+    }
+    
+    for(int j = i - 1; j >= 0; j--) {
+      System.out.print(binary[j]);
+    }
+    
   }
   
 }

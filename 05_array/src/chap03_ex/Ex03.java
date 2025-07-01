@@ -1,4 +1,4 @@
-package chap03_ex;
+ package chap03_ex;
 
 public class Ex03 {
 
@@ -10,7 +10,7 @@ public class Ex03 {
     //      기존 배열의 참조를 새로운 배열의 참조로 바꿉니다.
     
     String[] seasons = {"spring", "summer"};
-        
+    
   }
   
 }

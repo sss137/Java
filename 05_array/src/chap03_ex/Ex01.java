@@ -7,7 +7,18 @@ public class Ex01 {
     // 다음 정수형 배열에 저장된 모든 요소의 합계와 평균을 출력하세요.
     
     int[] numbers = {4, 7, 9, 12, 17, 19, 24, 28, 30};
-        
+    int sum = 0;
+    double avg = 0;
+    
+    for(int num : numbers) {
+      sum += num;
+    }
+    
+    avg = (double)sum / numbers.length;
+    
+    System.out.println(sum);
+    System.out.println(avg);
+    
   }
   
 }
