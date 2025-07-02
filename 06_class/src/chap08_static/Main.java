@@ -1,13 +1,21 @@
 package chap08_static;
 
-import chap07_access_modifier.Car;
-
 public class Main {
-
+ 
   public static void main(String[] args) {
     
-    Car car = new Car();
+    Counter counter1 = new Counter();
+    Counter counter2 = new Counter();
+    Counter counter3 = new Counter();
     
+    //static 멤버는 클래스를 이용해서 접근합니다.
+    System.out.println("생성된 Counter 객체 수: " + Counter.count);
+    Counter.viewCount();
+   
+    //인스턴스 메소드는 인스턴스(객체)를 이용해서 호출합니다.
+    counter1.printInfo();
+    counter2.printInfo();
+    counter3.printInfo();
     
   }
 
