@@ -5,13 +5,14 @@ import java.util.Arrays;
 /*
  * 메소드 형식
  * 반환타입 메소드명(매개변수1, 매개변수2, ...) {
- *   메소드 본문 코드
+ *   본문 코드
  *   return 반환값
  * }
  * 
  * 메소드명: camelCase
  */
 public class Parameter {
+  
   /**
    * @param 없음
    */

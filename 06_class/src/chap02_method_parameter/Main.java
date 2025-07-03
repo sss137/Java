@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class Main {
 
   public static void main(String[] args) {
-    //클래스 Parameter 타입의 객체 parameter 생성
+    
+    //Parameter 클래스 타입의 객체 parameter 생성
     Parameter parameter = new Parameter();
     
     //객체 parameter를 이용해서 메소드를 호출합니다.

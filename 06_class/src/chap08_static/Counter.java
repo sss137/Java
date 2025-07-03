@@ -43,7 +43,7 @@ package chap08_static;
    */
 public class Counter {
   
-  //인스턴스 멤버(인스턴스에 소속되고 인스턴스로 접근합니다.)
+  //인스턴스 멤버(인스턴스(객체)에 소속되고 인스턴스(객체)로 접근합니다.)
   private String name;
   
   //클래스 맴버(클래스에 소속되고 클래스로 접근합니다.)

@@ -1,7 +1,6 @@
 package chap07_access_modifier;
 
 /* 
- * import
  * 1. 다른 패키지에 있는 클래스, 인터페이스, 라이브러리 등 현재 소스 파일에서 사용할 수 있도록 불러오는 명령어입니다.
  * 2. 동일한 패키지에 있거나, java.lang 패키지에 있으면 import를 하지 않습니다.
  * 3. 다른 패키지에 있거나, java.lang 패키지에 없는 것들은 import를 해야 합니다.
@@ -22,8 +21,8 @@ package chap07_access_modifier;
  *    2) protected: 동일 패키지에 있거나, 상속 관계인 경우 접근할 수 있습니다.
  *    3) default  : 동일 패키지에 있으면 접근할 수 있습니다.
  *                  default 키워드는 존재하지 않습니다.
- *                  package 권한이라고도 합니다.
  *                  Access Modifier가 없는 경우 default 권한을 가집니다.
+ *                  package 권한이라고도 합니다.
  *    4) private  : 클래스 내부에서만 접근할 수 있습니다.
  * 3. 멤버의 권한
  *    1) 필드  : private(정보 은닉) 

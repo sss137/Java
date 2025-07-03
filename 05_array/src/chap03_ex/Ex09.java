@@ -21,6 +21,24 @@ public class Ex09 {
     
     String[][] gugudan = new String[8][9];
     
+    // 행 우선(row major) 방식으로 출력해 보기
+    for(int i = 0; i < gugudan.length; i++) {
+      for(int j = 0; j < gugudan[i].length; j++) {
+        gugudan[i][j] = String.format("%dx%d=%d", i+2, j+1, (i+2)*(j+1));  // 첫 번재 인자에 있는 %d는 정수가 출력되는 자리임을 나타내고,
+                                                                           // 두 번째 인자들이 순서대로 %d에 표시됩니다. 
+        System.out.print(gugudan[i][j] + "\t");
+      }
+      System.out.println();
+    }
+    
+    // 열 우선(column major) 방식으로 출력해 보기
+    for(int j = 0; j < 9; j++) {
+      for(int i = 0; i < 8; i++) {
+        System.out.print(gugudan[i][j] + "\t");
+      }
+      System.out.println();
+    }
+    
   }
   
 }

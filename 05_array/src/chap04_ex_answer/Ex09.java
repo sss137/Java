@@ -25,6 +25,7 @@ public class Ex09 {
       for (int j = 0; j < gugudan[i].length; j++) {
         gugudan[i][j] = String.format("%dx%d=%d", i+2, j+1, (i+2)*(j+1));  // 첫 번재 인자에 있는 %d는 정수가 출력되는 자리임을 나타내고,
                                                                            // 두 번째 인자들이 순서대로 %d에 표시됩니다. 
+        System.out.print(gugudan[i][j] + "\t");
       }
     }
     

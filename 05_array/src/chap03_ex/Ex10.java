@@ -1,4 +1,4 @@
-package chap03_ex;
+ package chap03_ex;
 
 public class Ex10 {
 
@@ -36,6 +36,26 @@ public class Ex10 {
         {0, 0, 1, 0, 0},
         {0, 0, 1, 0, 0}
     };
+    
+ // T가 90도 회전한 상태의 값을 temporary에 저장합니다.
+    int[][] temporary = new int[5][5];
+    
+    for(int i = 0; i < T.length; i++) {
+      for(int j = 0; j < T[i].length; j++) {
+        temporary[j][4-i] = T[i][j];
+      }
+    }
+    
+    // T의 참조를 temporary의 참조로 바꿉니다.
+    T = temporary;
+    
+    for(int i = 0; i < T.length; i++) {
+      for(int j = 0; j < T[i].length; j++) {
+        System.out.print(String.format("%-2d", T[i][j]));  // %2d는 항상 2자리로 정수를 표시합니다.
+                                                           // 마이너스(-)는 왼쪽 정렬입니다.
+      }
+      System.out.println();
+    }
     
   }
   

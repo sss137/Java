@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Main {
 
   public static void main(String[] args) {
+    
     Return ret = new Return();
     ret.methodA(-1);
     ret.methodA(0);
