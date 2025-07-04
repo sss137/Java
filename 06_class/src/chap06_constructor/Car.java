@@ -33,7 +33,7 @@ public class Car {
   
   //디폴트 생성자
   Car() {
-    System.out.println("생성자 Car() 호출되었습니다.");
+    System.out.println("원래는 본문 없습니다.");
   }
   
   //일반 생성자1

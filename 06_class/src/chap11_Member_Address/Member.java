@@ -7,4 +7,17 @@ public class Member {
   private Address home;  //------ 집주소
   private Address delivery;  //-- 배송지주소
   
+  public Member(Address home, Address delivery) {
+    super();
+    this.home = home;
+    this.delivery = delivery;
+  }
+  
+  public void printInfo() {
+    System.out.println("[집주소]");
+    home.printInfo();
+    System.out.println("[배송지주소]");
+    delivery.printInfo();
+  }
+  
 }

@@ -6,6 +6,13 @@ public class Main {
 
   public static void main(String[] args) {
 
+    Member member = new Member(
+        new Address("12345", "주소1", "동호1"), 
+        new Address("67890", "주소2", "동호2")
+    );
+    
+    member.printInfo();
+    
   }
 
 }

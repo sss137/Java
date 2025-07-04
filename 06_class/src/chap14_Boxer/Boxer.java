@@ -44,7 +44,11 @@ public class Boxer {
    * @param other 상대 복서(Boxer) 객체입니다.
    */
   public void punch(Boxer other) {
-    /* 구현 */
+    if (other.energy < power) {
+      other.energy = 0;
+    } else {
+      other.energy -= power;
+    }
   }
   
 }
