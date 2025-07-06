@@ -29,7 +29,7 @@ public class Main {
     car2.setPrice(200);
     car2.getBrand().setName("카와이");
     car2.getBrand().setNation("일본");
-    
+    car2.printInfo();
   }
 
 }

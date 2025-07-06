@@ -27,7 +27,6 @@ public class Bus {
   //Bus 탑승(빈 Seat가 보이면 순차적으로 채웁니다.)
   public void on(Person person) {
     if(count == LIMIT) {
-      
       System.out.println("만차");
       return;
     }

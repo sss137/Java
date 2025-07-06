@@ -71,8 +71,8 @@ public class Customer {
     //receipt += String.format("%-30s%10d\n", product.getName(), price);
     //%30s: 문자열을 30자리 고정폭으로 작성, 마이너스 기호는 왼쪽 정렬을 의미
     //%10d: 정수를 10자리 고정폭으로 작성, 마이너스 기호가 없으면 오른쪽 정렬을 의미
-    //abcdefg...                      50000
-    //------------------------------ ------
+    //abcdefg...                          50000
+    //------------------------------ ----------
     if(total > money) {                         //돈이 부족한 상황
       JOptionPane.showMessageDialog(null, "돈이 부족해서 구매할 수 없습니다.");
       return null;
