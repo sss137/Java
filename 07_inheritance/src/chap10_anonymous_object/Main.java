@@ -25,20 +25,19 @@ public class Main {
 
   public static void main(String[] args) {
     
-    //서브클래스 Chihuahua 없이 chihuahua 객체 만들기
-    Dog chi = new Dog() {    //new Dog() {} 부분이 익명 객체입니다.
-                             //new Chihuahua 없이 1회성
+    //서브클래스 생성 없이 chihuahua 객체 만들기
+    Dog chihuahua = new Dog() {    //new Dog() {} 부분이 익명 객체입니다.
+                                   //new Chihuahua 없이 1회성
       @Override
       public void bark() {
         System.out.println("망망");
       }
     };
     
-    chi.bark();
+    chihuahua.bark();
     
-    //구현클래스 ConfirmButton 없이 confirButton 객체 만들기
+    //구현클래스 생성 없이 confirButton 객체 만들기
     Button confirButton = new Button() {
-      
       @Override
       public void onClick() {
         System.out.println("메인페이지로 이동합니다.");
