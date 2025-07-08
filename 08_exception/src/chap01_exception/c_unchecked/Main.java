@@ -12,7 +12,7 @@ package chap01_exception.c_unchecked;
  *    2) ArrayIndexOutOfBoundsException: 배열의 인덱스가 사용 범위를 벗어난 경우
  *    3) ArithmeticException: 산술 연산 오류 발생 시 발생
  *    4) ClassCastException: 잘못된 클래스 타입으로 캐스팅 시 발생
- *    5) NumberFormatExceotion: 잘못된 형식의 문자열을 숫자로 변환할 때 발생    << 예시) "1.5" -> parseInt
+ *    5) NumberFormatException: 잘못된 형식의 문자열을 숫자로 변환할 때 발생    << 예시) "1.5" -> parseInt
  */
 public class Main {
 
