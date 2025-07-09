@@ -7,7 +7,6 @@ public class Boxer {
   private int power;  //--------- 파워
   
   public Boxer(String name, int energy, int power) {
-    super();
     this.name = name;
     this.energy = energy;
     this.power = power;
@@ -44,7 +43,7 @@ public class Boxer {
    * @param other 상대 복서(Boxer) 객체입니다.
    */
   public void punch(Boxer other) {
-    if (other.energy < power) {
+    if(other.energy < power) {
       other.energy = 0;
     } else {
       other.energy -= power;

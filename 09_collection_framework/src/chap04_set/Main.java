@@ -14,9 +14,9 @@ import java.util.TreeSet;
  * 3. 주요 구현클래스
  *       컬렉션 종류     정렬 여부   순서 유지        중복 판단 기준(모두 중복 x)   특징
  *    --------------------------------------------------------------------------------------------------
- *    1) HashSet         없음        유지 안 됨       equals() + hashCode()         가장 빠름
+ *    1) HashSet         없음        유지 안 됨       hashCode() + equals()         가장 빠름
  *    2) TreeSet         자동 정렬   정렬 순서 유지   compareTo() 또는 Comparator   느리지만 정렬 기능
- *    3) LinkedHashSet   없음        삽입 순서 유지   equals() + hashCode()         순서 필요할 때 사용
+ *    3) LinkedHashSet   없음        삽입 순서 유지   hashCode() + equals()         순서 필요할 때 사용
  */
 
 /*

@@ -6,7 +6,6 @@ public class BankAccount {
   private long balance;  //----- 잔고
   
   public BankAccount(String accNo, long balance) {
-    super();
     this.accNo = accNo;
     this.balance = balance;
   }
