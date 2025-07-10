@@ -17,7 +17,6 @@ public class ProductAndChange {
   private double change;
   
   public ProductAndChange(int count, double change) {
-    super();
     this.count = count;
     this.change = change;
   }

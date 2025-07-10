@@ -33,18 +33,16 @@ public class Main {
         System.out.println("망망");
       }
     };
-    
     chihuahua.bark();
     
     //구현클래스 생성 없이 confirButton 객체 만들기
-    Button confirButton = new Button() {
+    Button confirmButton = new Button() {
       @Override
       public void onClick() {
         System.out.println("메인페이지로 이동합니다.");
       }
     };
-    
-    confirButton.onClick();
+    confirmButton.onClick();
    
     //메소드에 익명 객체를 인자로 전달하기
     WebService.signUp(new Button() {

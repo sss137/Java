@@ -6,7 +6,7 @@ public class Main {
     
     Computable computer = new Computer();
     
-    System.out.println("전압: " + ElectronicProduct.VOLT);
+    System.out.println("전압: " + Computer.VOLT);
     computer.powerOn();
     computer.powerOff();
     

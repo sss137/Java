@@ -13,7 +13,7 @@ public class Main {
     //매개변수가 Food인 경우 모든 Food 구현체를 넣을 수 있습니다.
     p.eat(h);
     p.eat(s);
-    p.eat(b);    //컴파일 오류 내고 싶다.(실행을 막고 싶다.)
+    p.eat(b);
     
     //매개변수가 FavoriteFood인 경우 FavoriteFood 구현체만 넣을 수 있습니다.
     
