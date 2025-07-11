@@ -122,8 +122,8 @@ public class Main {
   
   public static void main(String[] args) {
 
-//    handling();
-    deleteDirectoryTree("D:/2025/07/10");
+    handling();
+//    deleteDirectoryTree("D:/2025/07/10");
 //    information();
     
   }
