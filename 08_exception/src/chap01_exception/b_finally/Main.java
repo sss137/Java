@@ -17,7 +17,7 @@ public class Main {
   public static void main(String[] args) {
     
     try {
-      int[] numbers = new int[-5];    //NagativeArraySizeException 예외 발생(음수 크기의 배열 생성 시)
+      int[] numbers = new int[5];    //NagativeArraySizeException 예외 발생(음수 크기의 배열 생성 시)
       System.out.println(Arrays.toString(numbers));
       System.out.println("try 블록입니다.");
     } catch(Exception e) {

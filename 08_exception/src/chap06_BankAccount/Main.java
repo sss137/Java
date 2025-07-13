@@ -4,7 +4,6 @@ public class Main {
 
   public static void main(String[] args) {
 
-
     try {
       BankAccount myAcc = new BankAccount("010-1111-1111", 500_000);  //----- 내 계좌 (자바에서는 숫자 3자리마다 밑줄을 넣을 수 있습니다.)
       BankAccount momAcc = new BankAccount("010-9999-9999", 1_000_000);  //-- 엄마 계좌
@@ -15,9 +14,10 @@ public class Main {
       
       myAcc.inquiry();  //----- 이체결과확인
       momAcc.inquiry();
-    } catch (DepositException | WithdrawalException e) {    //두 개 예외 중 하나를 받습니다.
+    } catch(DepositException | WithdrawalException e) {    //두 개 예외 중 하나를 받습니다.
       System.out.println(e.getMessage());
     }
+    
   }
 
 }

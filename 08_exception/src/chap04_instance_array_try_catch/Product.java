@@ -25,15 +25,16 @@ public class Product {
   }
   
   public void setPrice(int price) {
-    //가격을 음수로 설정하면 예외가 발생합니다. 예외처리 해보기.
+    //가격을 음수로 설정하면 예외가 발생합니다.
     try {
       if(price < 0) {
         throw new RuntimeException(price + "원은 잘못된 가격입니다.");
       }
+      this.price = price;
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }
-    this.price = price;
+    
  }
   
 }

@@ -17,7 +17,7 @@ public class BankAccount {
    * @throws DepositException 마이너스 입금을 처리하는 예외입니다.
    */
   public void deposit(long money) throws DepositException {    //예외 회피
-    if (money < 0) {
+    if(money < 0) {
       throw new DepositException(money + "원 입금 불가");       //예외 발생
     }
     balance += money;
@@ -30,10 +30,10 @@ public class BankAccount {
    * @throws WithdrawalException 마이너스 출금과 잔고보다 큰 금액의 출금을 처리하는 예외입니다.
    */
   public long withdrawal(long money) throws WithdrawalException {    //예외 회피
-    if (money < 0) {
+    if(money < 0) {
       throw new WithdrawalException(money + "원 출금 불가");    //예외 발생(0을 반환)
     }
-    if (balance < money) {
+    if(balance < money) {
       throw new WithdrawalException("잔고: " + balance + "원");  //예외 발생(0을 반환)
     }
     balance -= money;
@@ -49,7 +49,7 @@ public class BankAccount {
    * @throws WithdrawalException 
    */
   public void transfer(BankAccount bankAccount, long money) throws DepositException, WithdrawalException {
-    bankAccount.deposit( withdrawal(money) );
+    bankAccount.deposit(withdrawal(money));
   }
   
   /**

@@ -22,9 +22,9 @@ public class Main {
       
       //score의 범위가 0~100인지 확인 후 아닌 경우 예외를 직접 발생시킵니다.
       if(score < 0 || score > 100) {
-        throw new RuntimeException(score + "점은 잘못된 점수입니다.");    //Unchecked 발생
+        throw new RuntimeException(score + "점은 잘못된 점수입니다.");
       }
-    } catch (Exception e) {
+    } catch(Exception e) {
       System.out.println(e.getMessage());
     }
     

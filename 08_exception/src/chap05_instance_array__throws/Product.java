@@ -25,7 +25,7 @@ public class Product {
   }
   
   public void setPrice(int price) {    //throws RuntimeException 생략
-    //예외 발생 후 예외 회피(예외 회피 시 null 반환)
+    //예외 발생 후 예외 회피
     if(price < 0) {
       throw new RuntimeException(price + "원은 잘못된 가격입니다.");
     }

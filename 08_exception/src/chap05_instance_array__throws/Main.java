@@ -39,7 +39,7 @@ public class Main {
         JOptionPane.showMessageDialog(null, receipt);    //구매 Product 목록 + 총 구매금액
         JOptionPane.showMessageDialog(null, "남은 돈: " + customer.getMoney());
       }
-    } catch (Exception e) {
+    } catch(Exception e) {
       System.out.println(e.getMessage());
     }
     

@@ -63,14 +63,13 @@ public class Main {
     catch(ArrayIndexOutOfBoundsException e) {
       System.out.println("사용할 수 없는 인덱스가 사용되었습니다.");    //RuntimeException 하위 예외 타입
     }
-    catch (RuntimeException e) {                                        //상위 예외 타입(상속 관계의 예시)
+    catch(RuntimeException e) {                                         //상위 예외 타입(상속 관계의 예시)
       System.out.println("알 수 없는 예외가 발생했습니다.");
     }
     
   }
   
   public static void javaLangException() {
-    
     
     try {
       int a = 10, b = 0;
@@ -80,7 +79,7 @@ public class Main {
       System.out.println(a / b);
     } 
     
-    catch (Exception e) {    //거의 모든 예외를 받을 수 있는 java.lang.Exception 클래스
+    catch(Exception e) {    //거의 모든 예외를 받을 수 있는 java.lang.Exception 클래스
       //1. 예외 클래스 확인하기
       String exception = e.getClass().getName();
       

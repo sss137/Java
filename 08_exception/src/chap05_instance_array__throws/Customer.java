@@ -28,7 +28,7 @@ public class Customer {
   }
   
   public void addToCart(Product product) {    //throws RuntimeException 생략
-    //예외 발생 후 예외 회피(예외 회피 시 null 반환)
+    //예외 발생 후 예외 회피
     if(cart == null) {
       throw new RuntimeException("cart를 먼저 준비하세요.");
     }
@@ -44,30 +44,30 @@ public class Customer {
   }
   
   public String purchase() {    //throws RuntimeException 생략
-    //예외 발생 후 예외 회피(예외 회피 시 null 반환)
+    //예외 발생 후 예외 회피
     if(cart == null) {
       throw new RuntimeException("cart가 없어서 구매할 수 없습니다.");
     }
-    int count = cart.getCount();    //여러번 호출을 막기 위해 변수에 저장
+    int count = cart.getCount();   
     if(count == 0) {
       throw new RuntimeException("cart에 담긴 Product가 없어서 구매할 수 없습니다.");
     }
-    String receipt = "구디마트 영수증\n";       //영수증의 첫 문구
-    int total = 0;                              //구매총액
-    Product[] products = cart.getProducts();    //여러번 호출을 막기 위해 변수에 저장, Cart에 저장된 Product[] 배열
-    for(int i = 0; i < count; i++) {           //구매한 Product 개수만큼 반복
-      Product product = products[i];            //구매한 개별 Product
+    String receipt = "구디마트 영수증\n";  
+    int total = 0;                         
+    Product[] products = cart.getProducts();
+    for(int i = 0; i < count; i++) {        
+      Product product = products[i];        
       int price = product.getPrice();
-      total += price;                           //개별 Product 가격을 구매총액에 누적
-      receipt += product.getName();             //구매내역을 영수증에 기록
+      total += price;                       
+      receipt += product.getName();         
       receipt += "......";
-      receipt += price + "\n";                  //구매내역을 영수증에 기록
+      receipt += price + "\n";              
       }
-    if(total > money) {                         //돈이 부족한 상황
+    if(total > money) {                
       throw new RuntimeException("돈이 부족해서 구매할 수 없습니다.");
     }
-    money -= total;                              //고객이 구매총액을 내고 구매 완료
-    receipt += "구매 총액......" + total + "\n"; //영수증 마지막 문구
+    money -= total;                
+    receipt += "구매 총액......" + total + "\n";
     return receipt;
   }
   
