@@ -20,3 +20,8 @@ CREATE TABLE IF NOT EXISTS tbl_board (
   modified_at TIMESTAMP,
   FOREIGN KEY(uid) REFERENCES tbl_user(uid)
 ) ENGINE=InnoDB;
+
+SELECT u.uid, nickname, bid, title, content, created_at, modified_at
+ FROM tbl_user u INNER JOIN tbl_board b
+  ON u.uid = b.uid
+ LIMIT 0, 10
