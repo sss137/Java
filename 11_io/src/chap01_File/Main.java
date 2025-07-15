@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-//오토커밋 설정 바꾸고 나갔다 와
+
 /*
  * java.io.File
  * 1. 파일과 디렉터리(폴더)에 대한 정보를 관리하고, 생성/삭제 등 작업을 지원하는 클래스입니다.
