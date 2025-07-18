@@ -10,7 +10,7 @@ public class Company {
   private List<Employee> employees;
   
   // constructor
-  public Company(String name) { //씨발
+  public Company(String name) {
     this.name = name;
     employees = new ArrayList<Employee>();
   }
