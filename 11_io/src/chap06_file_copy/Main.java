@@ -4,7 +4,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    FileUtils.fileCopy("D:/dev/Web/assets/images/flower1.jpg", "D:/storage/flower1.jpg");
+    FileUtils.fileCopy("C:/dev/Web/assets/images/flower1.jpg", "C:/storage/flower1.jpg");
     
   }
 

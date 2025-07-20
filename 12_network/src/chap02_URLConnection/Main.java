@@ -29,14 +29,14 @@ public class Main {
     //웹 사이트의 이미지 내려받기
     URL url = new URL("https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png");
     HttpURLConnection con = (HttpURLConnection)url.openConnection();    //접속 링크 얻어내기
-//    con.connect();    //실제 접속(getInputStream(), getOutputStream(), getResponseCode() 등
-//                      //실제 접속을 유발하는(트리거) 다른 메소드를 함께 사용하는 경우 생략 가능)
-//                      //따라서 실전에서는 잘 안 씀
+    //con.connect();      실제 접속(실제 접속을 유발하는 다른 메소드를 함께 사용하는 경우 생략 가능)
+                        //getInputStream(), getOutputStream(), getResponseCode() 등
+                        //따라서 실전에서는 잘 안 씀
     int responseCode = con.getResponseCode();    //HTTP 상태코드(200: OK, 404: Not Found 등)
     
     BufferedInputStream in = null;    //이미지 서버로부터 데이터를 입력 받는 버퍼스트림
     
-    if(responseCode == HttpURLConnection.HTTP_OK) {    // = if(responseCode == 200)
+    if(responseCode == HttpURLConnection.HTTP_OK) {          // = if(responseCode == 200)
       in = new BufferedInputStream(con.getInputStream());    //접속 링크로부터 입력스트림을 받아내서 버퍼를 추가한 방식
     } else {
       in = new BufferedInputStream(con.getErrorStream());    //에러 전용 입력스트림으로 에러 사유를 받아볼 수 있도록 처리
@@ -46,7 +46,7 @@ public class Main {
     File file = new File(filename);            //저장 디렉터리 지정 없이 파일명만 전달
     BufferedOutputStream out = null;           //이미지 서버로부터 받은 데이터를 로컬에 출력하기 위한 버퍼스트림
     out = new BufferedOutputStream(new FileOutputStream(file));
-    byte[] b = new byte[1024];                //1KB 단위로 이미지 서버로부터 데이터를 받아옴
+    byte[] b = new byte[1024];                //1KB 단위로 데이터를 바이트 배열에 저장
     int readByte = 0;                          //실제로 읽은 데이터의 바이트 수
     while((readByte = in.read(b)) != -1) {    //파일의 끝(EOF == -1)에 도달하지 않았다면 계속 읽어오기
       out.write(b, 0, readByte);               //실제로 읽은 데이터만 출력스트림으로 보내기(로컬로 보내기)

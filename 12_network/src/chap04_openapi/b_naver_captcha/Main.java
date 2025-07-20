@@ -9,7 +9,6 @@ public class Main {
   public static void main(String[] args) {
     
     try {
-      
       //1. 캡차 키 발급 요청
       String captchaKey = NaverOpenAPI.captchaKey();
       

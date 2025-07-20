@@ -19,10 +19,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    while(true ) {
-      
       try {
-        
         //표준 입력 스트림(키보드)으로부터 데이터를 입력 받는 Scanner 객체 생성
         Scanner sc = new Scanner(System.in);
         
@@ -30,24 +27,21 @@ public class Main {
         String name = sc.next();
         System.out.println("입력된 이름은 " + name + "입니다.");
         
-        System.out.println("나이를 입력하세요 >> ");
+        System.out.print("나이를 입력하세요 >> ");
         int age = sc.nextInt();
         System.out.println("입력된 나이는 " + age + "입니다.");
         
-        System.out.println("키는 입력하세요 >> ");
+        System.out.print("키는 입력하세요 >> ");
         double height = sc.nextDouble();
         System.out.println("입력된 키는 " + height + "입니다.");
         
         //입력 리소스 사용 후 반납
         sc.close();
-        break;
         
-      } catch (Exception e) {
+      } catch(Exception e) {
         System.out.println("똑바로 입력하세요.");
       }
       
-    }
-    
   }
 
 }

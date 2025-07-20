@@ -21,7 +21,7 @@ import java.time.format.DateTimeFormatter;
 /*
  * 파일/디렉터리 경로
  * 1. 경로 구분자(Separator)
- *    1) Windows: 역슬래시(자바에서는 역슬래시를 이스케이프 처리: \\)
+ *    1) Windows: 역슬래시(자바에서는 역슬래시를 이스케이프 처리하므로 2번: \\)
  *    2) MacOS/Linux: 슬래시(/)
  *    3) Windows를 이용한 개발과 Linux를 이용한 배포가 서로 다른 경로 구분자를 필요로 하므로 다음과 같이 해결
  *       (1) File.separator 필드를 활용합니다.(운영체제에 따라서 자동으로 경로 구분자가 선택됩니다.)
@@ -39,7 +39,7 @@ public class Main {
 
     //디렉터리 만들기
     //1. 생성한 디렉터리를 File 객체로 생성(디렉터리를 여기서 만드는 건 아닙니다.)
-    File dir = new File("D:/dev/Java/storage");
+    File dir = new File("C:/dev/Java/storage");
     
     //2. 디렉터리 생성(없으면 만드는 방식으로 진행합니다.)
     if(!dir.exists()) {     //if(dir.exists() == false)
@@ -58,7 +58,7 @@ public class Main {
     }
     
     //실습) 현재날짜를 디렉터리 이름으로 사용해서 생성하시오.(예: D:/2025/07/10)
-    File dir2 = new File("D:/" + DateTimeFormatter.ofPattern("yyyy/MM/dd").format(LocalDate.now()));
+    File dir2 = new File("C:/dev/Java/" + DateTimeFormatter.ofPattern("yyyy/MM/dd").format(LocalDate.now()));
     if(dir2.exists() == false) {
       dir2.mkdirs();
     }
@@ -122,9 +122,9 @@ public class Main {
   
   public static void main(String[] args) {
 
-    handling();
-//    deleteDirectoryTree("D:/2025/07/10");
-//    information();
+//    handling();
+//    deleteDirectoryTree("C:/dev/Java/2025/07/20");
+    information();
     
   }
 

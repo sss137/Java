@@ -125,15 +125,16 @@ public class Main {
     String b = "Hello";
     String c = new String("Hello");
     
+    //hashCode(): 객체의 내용을 바탕으로 계산된 숫자 값(기본적으로 내용이 같으면 같음)
     System.out.println(a.hashCode());    
     System.out.println(b.hashCode());
     System.out.println(c.hashCode());
-//    hashCode(): 객체의 내용을 바탕으로 계산된 숫자 값(기본적으로 내용이 같으면 같음)
     
 //    hashSet();
 //    unique();
-    treeSet();
-//    linkedHashSet();
+//    treeSet();
+    linkedHashSet();
+    
   }
   
 }

@@ -23,20 +23,20 @@ public class Main {
     DecimalFormat df = new DecimalFormat();
     
     //패턴 적용 후 확인 - 1
-    df.applyPattern("0");                        //정수로 표기
-    System.out.println(df.format(1234.56));      //1235(자동 반올림)
+    df.applyPattern("0");                         //정수로 표기
+    System.out.println(df.format(1234.567));
     
     //패턴 적용 후 확인 - 2
-    df.applyPattern("0.00");                     //소수 이하 2자리 표기
-    System.out.println(df.format(1234.56));      //1234.57
+    df.applyPattern("0.00");                      //소수 이하 2자리 표기
+    System.out.println(df.format(1234.567));      
 
     //패턴 적용 후 확인 - 3
-    df.applyPattern("#,##0")           ;         //천 단위 구분 기호 + 정수로 표기
-    System.out.println(df.format(1234.56));      //1,235
+    df.applyPattern("#,##0")           ;          //천 단위 구분 기호 + 정수로 표기
+    System.out.println(df.format(1234.567));   
     
     //패턴 적용 후 확인 - 4
     df.applyPattern("#,##0.00");                  //천 단위 구분 기호 + 소수 이하 2자리 표기
-    System.out.println(df.format(1234.567));      //1,23
+    System.out.println(df.format(1234.567));    
     
   }
   
@@ -65,7 +65,7 @@ public class Main {
     //null이 될 수 있는 값을 감싸는 Optional.ofNullable()과
     //null 대신 다른 값을 꺼내는 orElse()가 중요합니다.
     
-    //null인 경우 예외 처리하기(java.util.NoSuchElementException 발생
+    //null인 경우 예외 처리하기(java.util.NoSuchElementException 발생)
     
     opt2.orElseThrow();
     
