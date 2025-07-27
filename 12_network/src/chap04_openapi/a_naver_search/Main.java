@@ -10,7 +10,7 @@ public class Main {
 
     try {
       NaverOpenAPI.naverBookSearch();
-    } catch (Exception e) {
+    } catch(Exception e) {
       if(e instanceof UnsupportedEncodingException) {
         System.out.println("검색어 인코딩 실패");
       } else if(e instanceof MalformedURLException) {
