@@ -1,7 +1,7 @@
 package chap01_wrapper_class;
 
 /*
- * Wrapper Class
+ * Wrapper Class   
  * 1. 기본 타입(Primitive Type) 데이터를 참조 타입(Reference Type)으로 다뤄야 할 때 사용하는 클래스입니다.
  * 2. 기본 타입 값을 객체로 감싸서 객체처럼 사용할 수 있습니다.(필드, 메소드)
  * 3. 모든 Wrapper Class는 java.lang 패키지에 포함되어 있습니다. 즉 import가 필요 없습니다.
