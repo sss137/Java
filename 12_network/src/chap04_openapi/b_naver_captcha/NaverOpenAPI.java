@@ -66,7 +66,7 @@ public class NaverOpenAPI {
   
   /**
    * 캡차 이미지를 요청하는 메소드
-   * @param key 발급 받은 캡차 키
+   * @param key  <<  발급 받은 캡차 키
    * @return 캡차 이미지 발급 성공 시 true 실패 시 false
    */
   public static boolean captchaImage(String key) throws Exception {
@@ -109,7 +109,7 @@ public class NaverOpenAPI {
   
   /**
    * 캡차 이미지 요청이 실패하는 경우 실패 사유를 반환하는 메소드
-   * @param in 에러 스트림
+   * @param in  <<  에러 스트림
    * @return 실패 사유
    */
   private static String error(InputStream in) {
@@ -133,7 +133,7 @@ public class NaverOpenAPI {
   
   /**
    * 캡차 이미지를 보고 사용자가 입력한 값이 올바른지 판단하는 메소드
-   * @param key 발급 받은 캡차 키
+   * @param key  <<  발급 받은 캡차 키
    */
   public static void validateInput(String key) throws Exception {
     

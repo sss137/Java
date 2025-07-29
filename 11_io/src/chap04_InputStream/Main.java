@@ -10,7 +10,7 @@ import java.io.InputStream;
 
 /*
  * java.io.InputStream
- * 1. 바이트 기반 입력스트림의 최상위 추상 클래스입니다.(직접 인스턴스를 생성할 수 없습니다.)
+ * 1. 바이트 기반 입력스트림의 최상위 추상클래스입니다.(직접 인스턴스를 생성할 수 없습니다.)
  * 2. 파일, 네트워크 등으로부터 바이트 단위로 데이터를 읽어올 수 있습니다.
  * 3. 주요 하위클래스
  *    1) FileInputStream
@@ -18,7 +18,7 @@ import java.io.InputStream;
  *    3) DataInputStream
  * 4. 주요 메소드
  *    1) int read(): 입력스트림에서 1바이트를 읽고, 그 값을 0~255 사이의 정수로 반환합니다.
-                     만약 읽을 데이터가 더 이상 없으면 -1을 반환합니다.(EOF, End Of File)을 반환)
+                     만약 읽을 데이터가 더 이상 없으면 -1을 반환합니다.(EOF(End Of File)을 반환)
  *                   (1바이트를 int로 변환하면 0 ~ 255 값으로 반환되는데 이렇게 처리하면 
  *                   -1(EOF)과 반환하는 값의 차이를 만들 수 있습니다.)
  *                   (1바이트를 byte 그대로 반환하면 -128 ~ 127 값으로 반환하는데 이러면
@@ -38,12 +38,11 @@ public class Main {
     File file = new File("C:/Program Files/Java/jdk-17", "README");
     
     try(BufferedInputStream bin = new BufferedInputStream(new FileInputStream(file))) {
-      
       //int를 이용해 1바이트 단위로 파일 읽기
       int c;
       
       //파일에서 읽은 데이터를 저장해 둘 byte[] 배열
-      byte[] b = new byte[(int)file.length()];
+      byte[] b = new byte[(int)file.length()];    //.length() 타입은 long입니다.
       int i = 0;
 
       while((c = bin.read()) != -1) {
@@ -69,7 +68,6 @@ public class Main {
     File file = new File("C:/Program Files/Java/jdk-17", "README");
     
     try(BufferedInputStream bin = new BufferedInputStream(new FileInputStream(file))) {
-      
       //byte[] 배열을 이용해 20바이트 단위로 파일 읽기
       byte[] b = new byte[20];
       
@@ -107,7 +105,7 @@ public class Main {
   
   public static void dataInputStream() throws IOException {
     
-    File file = new File("D:/storage/test.bin");
+    File file = new File("C:/storage/test.bin");
     
     DataInputStream din = new DataInputStream(new BufferedInputStream(new FileInputStream(file)));
     
@@ -128,8 +126,8 @@ public class Main {
 //    bufferedInputStream2();
     
     try {
-      systemIn();
-//      dataInputStream();
+//      systemIn();
+      dataInputStream();
     } catch(Exception e) {
       e.printStackTrace();
     }

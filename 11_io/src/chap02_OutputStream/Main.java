@@ -28,14 +28,13 @@ public class Main {
   
   public static void fileCreate() {
     
-    //신규 파일 생성 모드(항상 새로운 파일을 만듭니다. 기존 파일이 있다면 덮어쓰기합니다.)
-    File dir = new File("D:/storage");  // = new File("/storage")
+    //신규 파일 생성 모드(항상 새로운 파일을 만듭니다.( = 기존 파일이 있다면 덮어쓰기))
+    File dir = new File("C:/storage");
     File file = new File(dir, "test.dat");
     
     OutputStream os = null;    //try 블록, catch 블록, finally 블록에서 모두 접근 가능한 Scope에서 선언합니다.
     
     try {
-      
       os = new FileOutputStream(file);    //출력 스트림 os 생성(file로 통하는 출력 통로 생성)
       //os.write('A');  << 1바이트만 출력(정상 출력)
       os.write('홍');    //1바이트만 출력
@@ -58,7 +57,7 @@ public class Main {
         if(os != null) {
           os.close();
         }
-      } catch (IOException e2) {
+      } catch(IOException e2) {
         System.out.println("출력 스트림 종료 시 오류가 발생했습니다.");
       }
       
@@ -69,12 +68,11 @@ public class Main {
   public static void fileAppend() {
     
     //파일 추가 모드(기존 파일의 끝에 데이터를 추가합니다. 기존 파일이 없다면 새로 생성합니다.)
-    File file = new File("D:/storage", "test.dat");
+    File file = new File("C:/storage", "test.dat");
     
     OutputStream os = null;
     
     try {
-      
       os = new FileOutputStream(file, true);    //true를 추가하면 파일 추가 모드가 됩니다.
       os.write('!');
       
@@ -85,7 +83,7 @@ public class Main {
         if(os != null) {
           os.close();
       }
-    } catch (Exception e2) {
+    } catch(Exception e2) {
       e2.printStackTrace();
     }
       
@@ -96,11 +94,9 @@ public class Main {
   public static void tryWithResources() {
     
     //try-with-resources 문법: try에서 생성한 자원 해제가 자동으로 이루어지는 문법입니다.(close 생략)
-    
-    File file = new File("D:/storage/test.dat");
+    File file = new File("C:/storage/test.dat");
     
     try(OutputStream os = new FileOutputStream(file, true)) {
-    
       os.write('?');
       
     } catch(Exception e) {
@@ -116,7 +112,7 @@ public class Main {
      * 1. 출력 스트림의 기능에 내부 버퍼(대략 8KB)를 추가하여 출력 효율을 높인 클래스입니다.( = 속도를 높인다.)
      * 2. 내부 버퍼에 쌓인 출력 데이터는 내부 버퍼가 가득차거나 /flush() 호출 또는 /close() 호출 시 한 번에 출력됩니다.
      */
-    File file = new File("D:/storage/test.dat");
+    File file = new File("C:/storage/test.dat");
     
     try(FileOutputStream fos = new FileOutputStream(file);
         BufferedOutputStream bos = new BufferedOutputStream(fos)) {
@@ -140,11 +136,10 @@ public class Main {
      *    2) writeDouble(double value)
      *    3) writeUTF(String s): UTF-8 인코딩으로 문자열 출력(한글도 정상 출력 가능)  << 바이트스트림인데 한글을 출력하고 싶을 때 사용
      */
-    File file = new File("D:/storage/test.bin");
+    File file = new File("C:/storage/test.bin");
     DataOutputStream dos = null;
     
     try {
-
       dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
       dos.writeInt(12345);
       dos.writeDouble(67.89);

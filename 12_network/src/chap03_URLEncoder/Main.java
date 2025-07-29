@@ -20,6 +20,7 @@ public class Main {
    * 전달된 문자열을 UTF-8 인코딩 처리한 결과를 반환하는 메소드
    * @param str
    * @return
+   * @throws UnsupportedEncodingException
    */
   public static String encodeUTF8(String str) throws UnsupportedEncodingException {
     return URLEncoder.encode(str, "UTF-8");

@@ -19,7 +19,7 @@ public class NaverOpenAPI {
     
     //사용자로부터 검색어 입력 받기
     Scanner sc = new Scanner(System.in);
-    System.out.println("책 검색 API입니다. 검색할 내용을 입력하세요 >>> ");
+    System.out.print("책 검색 API입니다. 검색할 내용을 입력하세요 >>> ");
     String query = sc.nextLine();     //공백 문자를 포함하여 검색어를 입력 받을 수 있습니다.
     
     //요청

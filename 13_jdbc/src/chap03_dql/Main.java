@@ -18,6 +18,12 @@ import chap02_dml.DBConnection;
  *    2) 칼럼(Column) 단위 조회: 타입 기반의 메소드를 이용해 각 칼럼을 조회(getInt(), getString() 등)
  *    3) 커서(Cursor) 기반: 최초 커서 위치는 결과 첫 행 이전이며, next() 메소드 호출 시 첫 행 결과 확인 가능
  */
+
+/*
+ * next() 메서드는 단순히 다음 행으로 커서를 이동시키는 역할만 하는 것이 아닙니다.
+ * 다음 행이 존재하는지 여부를 확인하고, 존재하면 true를 반환하고 커서를 그 행으로 이동시킵니다.
+ * 만약 다음 행이 없으면 false를 반환합니다.
+ */
 public class Main {
 
   public static void singleRow() throws Exception {
@@ -69,13 +75,13 @@ public class Main {
     
     //다중 행 결과 저장하기(tbl_user)
     //검색 결과를 어디에 저장할 것인가?
-    List<UserDTO> users = new ArrayList<UserDTO>();
+    List<UserDTO> users = new ArrayList<>();
     
     //DB 접속
     Connection con = DBConnection.getConnection();
     
     //쿼리문
-    String sql = "SELECT uid, nickname FROM tbl_user LIMIT 0, 10"; //첫 번쨰 행(Row)부터 10개 가져오기
+    String sql = "SELECT uid, nickname FROM tbl_user LIMIT 0, 10"; //첫 번째 행(Row)부터 10개 가져오기
     
     //PreparedStatement 객체 생성(쿼리문 실행 객체)
     PreparedStatement ps = con.prepareStatement(sql);
@@ -104,7 +110,7 @@ public class Main {
     
     //조인으로 다중 행 결과 저장하기(tbl_user, tbl_board)
     //검색 결과를 어디에 저장할 것인가?
-    List<BoardDTO> boards = new ArrayList<BoardDTO>();
+    List<BoardDTO> boards = new ArrayList<>();
     
     //DB 접속
     Connection con = DBConnection.getConnection();

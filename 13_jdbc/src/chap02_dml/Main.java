@@ -77,7 +77,7 @@ public class Main {
     ps.setInt(3, bid);  //3번째 ?에 bid 바인딩
     
     //쿼리문 실행(DML은 executeUpdate() 메소드를 호출합니다.)
-    int count = ps.executeUpdate();  //쿼리문 실행이 성공한 행(Row)의 개수를 반환합니다. (성공 시 1 반환, 실패 시 0 반환)
+    int count = ps.executeUpdate();  //쿼리문 실행이 성공한 행(Row)의 개수를 반환합니다.(성공 시 1 반환, 실패 시 0 반환)
     
     //결과 확인
     System.out.println(count + " 행이 수정되었습니다.");
@@ -128,7 +128,7 @@ public class Main {
 //      insert();
 //      update();
       delete();
-    } catch (Exception e) {
+    } catch(Exception e) {
       e.printStackTrace();
     }
     

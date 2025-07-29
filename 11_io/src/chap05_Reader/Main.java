@@ -30,8 +30,7 @@ public class Main {
   
   public static void fileReader() {
     
-    File file = new File("D:/storage/test.txt");
-    
+    File file = new File("C:/storage/test.txt");
     try(FileReader in = new FileReader(file)) {
     
       //한 번에 char[] cbuf만큼 씩 읽기(5글자 씩 읽기)
@@ -50,7 +49,7 @@ public class Main {
       }
       System.out.println(sb.toString());
       
-    } catch (Exception e) {
+    } catch(Exception e) {
       e.printStackTrace();
     }
     
@@ -67,10 +66,9 @@ public class Main {
      *    readLine() 메소드는 한 줄 전체를 읽어 String으로 변환합니다.
      *    파일이 끝나면 null을 반환합니다.
      */
-    File file = new File("D:/storage/test.txt");
+    File file = new File("C:/storage/test.txt");
     
     try(BufferedReader in = new BufferedReader(new FileReader(file))) {
-      
       //한 줄씩 저장할 String
       String line = null;
       
@@ -97,12 +95,11 @@ public class Main {
      * 2. 바이트 데이터를 지정한 문자 인코딩(예: UTF-8 등)에 따른 문자로 해석해 줍니다.
      * 3. 자체 버퍼링 기능은 없어서 대부분 BufferedReader와 함께 사용합니다.
      */
-    File file = new File("D:/storage/test.txt");
+    File file = new File("C:/storage/test.txt");
     
 //    try(InputStream in = new FileInputStream(file)) {    //한글은 모두 깨집니다
 //    try(InputStreamReader in = new InputStreamReader(new FileInputStream(file))) { //한글은 안 깨지지만 성능이 떨어집니다.
     try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file)))) {
-      
       StringBuilder sb = new StringBuilder();
       
 //      한 글자씩 읽어옴으로 느립니다.
@@ -126,9 +123,8 @@ public class Main {
 public static void systemIn() {
     
   try(InputStreamReader in = new InputStreamReader(System.in)) {
-    
     int c = 0;
-    while((c = in.read()) != -1) {    //EOF(-1) 입력은 ctrl + z
+    while((c = in.read()) != -1) {
       System.out.print((char)c);
     }
     

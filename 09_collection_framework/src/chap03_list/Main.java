@@ -36,8 +36,8 @@ public class Main {
   public static void mutable() {
     
     //mutable: 저장된 요소의 개수를 변경할 수 있는 리스트(크기는 자동 변경)
+    //참조 변수 타입은 List<String>이고, 실제 객체 타입은 ArrayList<String>입니다.
     List<String> seasons = new ArrayList<String>();    //참고: 디폴트 크기는 10입니다.
-    //List<String> 전체가 타입이며, 그 안의 String은 리스트가 저장할 데이터의 타입
     seasons.add("spring");    //순서대로 저장
     seasons.add("summer");
     seasons.add("autumn");
@@ -115,9 +115,9 @@ public class Main {
     
     //Person 리스트(일반 클래스)
     List<Person> team = new ArrayList<Person>();
-    team.add(new Person("뽀로로", 20));
+    team.add(new Person("뽀로로", 10));
     team.add(new Person("루피", 20));
-    team.add(new Person("에디", 20));
+    team.add(new Person("에디", 30));
     
     //Comparator 인터페이스를 이용해 정렬 방식을 동적으로 설정
     Collections.sort(team, new Comparator<Person>() {
