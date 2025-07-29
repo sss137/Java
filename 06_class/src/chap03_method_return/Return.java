@@ -10,7 +10,7 @@ public class Return {
    */
   void methodA(int x) {
     if(x < 0) {    //메소드가 실행되면 안 되는 조건을 가장 먼저 작성합니다.
-      return;     //메소드 실행 중지
+      return;      //메소드 실행 중지
     }
     System.out.println("methodA: " + x);
   }

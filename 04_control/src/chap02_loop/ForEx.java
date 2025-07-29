@@ -3,6 +3,7 @@ package chap02_loop;
 public class ForEx {
 
   public static void main(String[] args) {
+    
     //1~100 누적하기
     int total = 0;
     for(int x = 1; x <= 100; x++) {

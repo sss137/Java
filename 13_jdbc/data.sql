@@ -8,4 +8,8 @@ INSERT INTO tbl_board(uid, title, content) VALUES
   (2, "나는 호랑이", "나는 호랑이입니다."),
   (3, "나는 상어", "나는 상어입니다.");
   
+DELETE
+FROM db_jdbc.tbl_board
+WHERE bid = 16;
+
 COMMIT;

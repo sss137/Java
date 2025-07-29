@@ -3,7 +3,8 @@ package chap01_branch;
 public class IfEx {
 
   public static void main(String[] args) {
-    //짝수/홀수
+    
+    //짝수/홀수 
     int x = 10;
     if(x % 2 == 0) {
       System.out.println(x + "은(는) 짝수입니다.");

@@ -3,6 +3,7 @@ package chap02_multi_dimension;
 public class MultiDimensionEx {
 
   public static void main(String[] args) {
+    
     //2차원 배열이란?
     //1차원 배열이 여러 개 존재하는 경우 이 1차원 배열을 합치는 것을 의미합니다.
     
@@ -49,7 +50,7 @@ public class MultiDimensionEx {
     }
     
     /*
-     * [Stack] -> 지역 변수(일반 변수, 참조 변수)가 저장되는 곳
+     * [Stack] -> 지역 변수(기본형 변수, 참조형 변수)가 저장되는 곳
      * |
      * |                     Reference(참조값)
      * +-------------------+
@@ -62,7 +63,7 @@ public class MultiDimensionEx {
      * +-------------------+
      * | seats[0] : 0xAAA  | 0x100
      * +-------------------+
-     * | seats[1] : 0xBBB  | 0x104 (참조 변수 크기를 4바이트로 가정한 상황)
+     * | seats[1] : 0xBBB  | 0x104(참조 변수 크기를 4바이트로 가정한 상황)
      * +-------------------+
      * | seats[2] : 0xCCC  | 0x108
      * +-------------------+

@@ -3,7 +3,8 @@ package chap03_compare;
 public class ComparisonEx {
 
   public static void main(String[] args) {
-    // Comparison: 비교 연산
+    
+    //Comparison: 비교 연산
     int x = 10;
     int y = 20;
     System.out.println(x > y);    //greater than              (gt)

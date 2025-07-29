@@ -32,9 +32,7 @@ public class Car {
   Brand brand;    //Brand brand = null;
   
   //디폴트 생성자
-  Car() {
-    System.out.println("원래는 본문 없습니다.");
-  }
+  Car() {}
   
   //일반 생성자1
   Car(String model) {

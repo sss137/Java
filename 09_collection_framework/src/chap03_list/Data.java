@@ -19,7 +19,7 @@ public class Data implements Comparable<Data> {
   @Override
   public int compareTo(Data o) {
     return item - o.item;     // 현재 객체의 item이 크면 양수를 반환하므로, 현재 객체를 Data o 뒤에 둡니다.
-                              // 현재 객체의 item이 작으면 음수를 반환하므로, 현재 객체를 Data o 앞에 둡니다.
+                               // 현재 객체의 item이 작으면 음수를 반환하므로, 현재 객체를 Data o 앞에 둡니다.
   }
   
   @Override

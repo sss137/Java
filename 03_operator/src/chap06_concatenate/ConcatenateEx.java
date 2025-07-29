@@ -3,6 +3,7 @@ package chap06_concatenate;
 public class ConcatenateEx {
 
   public static void main(String[] args) {
+    
     //문자열 연결 : +
     int x = 10;
     System.out.println(x + "살");    //"10살"

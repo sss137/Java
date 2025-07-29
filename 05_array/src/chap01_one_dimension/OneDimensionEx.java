@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class OneDimensionEx {
 
   public static void main(String[] args) {
+    
     //배열 선언
     String[] blackPink;   //스택 영역에 참조 변수 blackPink가 생성됩니다.
     
@@ -50,7 +51,6 @@ public class OneDimensionEx {
     for(String hobby : hobbies) {
       System.out.print(hobby + ",");
     }
-    System.out.println();
     
   }
 

@@ -16,7 +16,6 @@ public class Main {
     p.eat(b);
     
     //매개변수가 FavoriteFood인 경우 FavoriteFood 구현체만 넣을 수 있습니다.
-    
     p.favoriteEat(h);
     p.favoriteEat(s);
 //    p.favoriteEat(b);
